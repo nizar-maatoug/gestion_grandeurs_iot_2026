@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # feature apps
     'grandeurs.apps.GrandeursConfig',
     'website.apps.WebsiteConfig',
+    'mqtt_topics.apps.MqttTopicsConfig',
 ]
 
 

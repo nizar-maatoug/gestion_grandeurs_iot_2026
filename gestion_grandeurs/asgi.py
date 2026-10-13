@@ -13,12 +13,15 @@ import django
 from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter
 
+from mqtt_topics.consumers import MqttTopicsConsumer
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gestion_grandeurs.settings')
 
 django.setup()
 
 application = ProtocolTypeRouter({
-    'http': get_asgi_application(),    
+    'http': get_asgi_application(),  
+    'mqtt': MqttTopicsConsumer().as_asgi(),
 })
 
 
