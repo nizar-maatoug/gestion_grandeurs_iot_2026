@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'grandeurs.apps.GrandeursConfig',
     'website.apps.WebsiteConfig',
     'mqtt_topics.apps.MqttTopicsConfig',
+    'persistence.apps.PersistenceConfig',
 ]
 
 
@@ -131,5 +132,16 @@ STATIC_URL = 'static/'
 MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+    },
+}
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        #"BACKEND": "channels.layers.InMemoryChannelLayer"
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+           "hosts": [("127.0.0.1", 6379)],           
+        },
     },
 }
