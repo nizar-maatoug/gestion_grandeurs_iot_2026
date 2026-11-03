@@ -24,6 +24,8 @@ staticfiles/
 .env
 .venv
 firebase_credentials.json
+certificat_firebase.json
+*.json
 
 # IDE settings
 .vscode/
