@@ -19,7 +19,8 @@ firebase_config = {
 }
 
 firebase=pyrebase.initialize_app(firebase_config)
-database=firebase.database()
+database=firebase.database() # get database instance
+
 
 cred = credentials.Certificate("certificat_firebase.json")
 firebase_admin.initialize_app(cred)
