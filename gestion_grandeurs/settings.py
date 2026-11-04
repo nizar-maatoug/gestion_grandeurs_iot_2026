@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'mqtt_topics.apps.MqttTopicsConfig',
     'persistence.apps.PersistenceConfig',
+    'dashboard.apps.DashboardConfig',
 ]
 
 

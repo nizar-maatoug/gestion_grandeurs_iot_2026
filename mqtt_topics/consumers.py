@@ -44,9 +44,7 @@ class MqttTopicsConsumer(MqttConsumer):
     async def sensor_temperature(self, event):
         print(f"Received message from group: {event['message']}")
         message = event["message"]
-        # push message to database
-        #persistData(message['payload'])
-
+        
     
         
               
