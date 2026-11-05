@@ -13,7 +13,7 @@
       );
       dashboardSocket.onmessage = function (e) {
         const data = JSON.parse(e.data);
-        document.querySelector("#dashboard_log").value += data.message + "\n";
+        document.querySelector("#dashboard_log").value += data.valeur + "\n";
       };
       dashboardSocket.onclose = function (e) {
         console.error("Dashboard socket closed unexpectedly");

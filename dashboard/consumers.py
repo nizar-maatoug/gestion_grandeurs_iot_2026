@@ -17,7 +17,7 @@ class DashboardConsumer(AsyncWebsocketConsumer):
     async def sensor_temperature(self, event):
         message = event["message"]
         # Send message to WebSocket
-        await self.send(text_data=json.dumps({"message": message['payload']}))
+        await self.send(text_data=message['payload'])
 
     async def disconnect(self, close_code):
         pass
