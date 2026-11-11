@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'mqtt_topics.apps.MqttTopicsConfig',
     'persistence.apps.PersistenceConfig',
     'dashboard.apps.DashboardConfig',
+    'mesures_rest_api.apps.MesuresRestApiConfig',
 ]
 
 
